@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS2 - Armory ROI - Szimuláció</title>
+    <title>Szimuláció</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +17,37 @@
                     <a href="kollekciok.html" class="nav-link">Kollekciók</a>
                 </li>
                 <li class="nav-item">
-                    <a href="szimulacio.html" class="nav-link">Szimulació</a>
+                    <a href="szimulacio.html" class="nav-link active">Szimuláció</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    
+    <div class="container">
+        <h1>Szimuláció</h1>
+        
+        <div class="simulator-controls">
+            <div class="control-group">
+                <label for="simKollekcioSelect">Kollekció:</label>
+                <select id="simKollekcioSelect">
+                    <option value="">-- Válassz kollekciót --</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="nyitasokSzama">Nyitások száma:</label>
+                <input type="number" id="nyitasokSzama" min="1" max="10000" value="100">
+            </div>
+            
+            <button id="szimulalGomb">Szimuláció indítása</button>
+            <button id="torlesGomb" class="secondary">Eredmények törlése</button>
+        </div>
+
+        <div class="eredmenyek-container" id="eredmenyekContainer">
+        </div>
+    </div>
+
+    <script src="kollekciok.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
